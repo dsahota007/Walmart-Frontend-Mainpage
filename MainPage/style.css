@@ -1,0 +1,275 @@
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+}
+
+.top-main-bar {
+  display: flex;
+  justify-content: space-between; /* This will keep items aligned to each edge with space in between */
+  align-items: center;
+  width: 100%; /* Full width */
+  background-color: #0e7cc5; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* Above other content */
+  padding: 0 0px; /* Increased padding on the left and right */
+}
+
+
+#mainTitle{
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 30px;
+}
+
+.search-wrapper {
+  position: relative;
+  flex-grow: 1; /* Allows it to fill available space */
+  margin: 0 10px; /* Space around the wrapper */
+  padding-right: 33px;
+  padding-left: 10px;
+}
+
+
+#top-main-bar-search {
+  width: 100%; 
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#top-main-bar-search-button {
+  position: absolute;
+  right: 18px; /* Position it towards the right end of the search input */
+  top: 50%; /* Align vertically */
+  transform: translateY(-50%); /* Center it vertically */
+  padding: 6px 12px;
+  border-radius: 15px; 
+  border: none; /* Remove border */
+  background-color: #ffdb11; 
+  color: white; 
+  cursor: pointer; 
+}
+
+#top-main-bar-search-button:hover {
+  background-color: #6687c5;
+}
+
+
+#walmart-logo{
+    height: 40px;
+    width: 40px;
+}
+#circle-logo-departments, #circle-logo-services{
+    height: 20px;
+    width: 20px;
+}
+
+.dropbtn {
+    font-size: 13px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit; /* This makes the button fit the top bar style */
+    margin: 0; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+
+  .dropdown {
+    position: relative; /* This ensures that the dropdown content is positioned relative to this container */
+
+}
+
+/* Styles for the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 25px 0px rgba(0,0,0,0.2);
+    z-index: 11;
+    top: calc(100% + 22px); /* Adjust Y position without affecting X position */
+    left: 0; /* Keeps X position aligned with the trigger element */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+  
+  /* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  
+.dropdown-content a:hover {
+    background-color: #9db4cfb6;
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+.dropdown:hover .dropbtn, #top-main-bar-cart:hover{
+    background-color: #1151b7;
+    border-radius: 40px;
+  }
+
+#top-main-bar-cart { 
+   padding: 10px;
+   margin-right: 30px; 
+   text-decoration: none;
+   color: white;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------2ndary top main bar ----------------------------------*/
+
+.secondary-top-main-bar {
+  display: flex;
+  justify-content: space-between; /* Adjusts content to space between */
+  align-items: center;
+  overflow: hidden; /* Keeps overflowing content hidden */
+  width: 100%; /* Full width of its container */
+  background-color: #0e7cc5; 
+  margin-top: 91px;
+
+}
+
+#secondary-top-main-address {
+  white-space: nowrap; /* Ensures address does not wrap */
+  flex-shrink: 0; /* Prevents the address from shrinking */
+  color: white;
+  padding-left: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#secondary-top-main-bar-link{
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.secondary-top-main-bar-links-container {
+  padding: 10px 22px; /* Increased left and right padding for more space */
+  flex-shrink: 0;
+}
+
+
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*----------------------- image section main  ----------------------------------*/
+ 
+.collage-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  
+}
+
+.collage-item {
+  background-size: cover;
+  background-position: center;
+  flex: 0 0 auto;
+  width: calc(33.333% - 33px); /* Original width */
+  height: 340px; /* Original height */
+  border-radius: 10px;
+  position: relative; /* Add this line */
+}
+
+/* Adjusting for double size */
+.double-width {
+  width: calc(66.666% - 40px); /* Double width minus gap x2 */
+}
+
+.double-height {
+  height: 400px; /* Double the height */
+}
+
+@media (max-width: 768px) {
+  .collage-item, .double-width, .double-height {
+    width: 100%; /* All items full width on smaller screens */
+    height: auto; /* Adjust height accordingly */
+  }
+}
+ 
+
+.collage-button {
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; 
+  display: inline-block; /* Allows the application of padding and margins */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ensure .collage-item includes position: relative; for positioning context */
+.collage-item {
+  position: relative;
+}
+
+.small-info-collage{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+.big-info-collage{
+  position: absolute;
+  top: 3px;
+  left: 30px;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.collage-container > .collage-item.double-width:nth-of-type(2) .big-info-collage {
+  top: 33px;
+  left: 30px;
+}
+
+.collage-link{
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.collage-container > .collage-item.double-width:nth-of-type(8) .collage-link {
+  top: 120px;
+  left: 30px;
+  font-size: 30px;
+}
